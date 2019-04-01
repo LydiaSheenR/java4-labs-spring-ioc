@@ -23,7 +23,7 @@ public class AnnotationConfigTests {
     assertNull(Thread.currentThread().getContextClassLoader().getResource("beans.xml"));
   }
 
-  /*  -- Uncomment one method at a time adding in just enough code to make the test pass --
+
 
   @Test
   public void appConfigClassExistsInClasspathTest () throws Exception {
@@ -99,7 +99,5 @@ public class AnnotationConfigTests {
     assertEquals("edu.cscc.java4.spring.ioc.config.TransactionService",transactionService.getClass().getName());
     assertEquals(0,new AppConfig().getClass().getDeclaredMethods().length);
   }
-
-  */
 
 }
