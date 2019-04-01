@@ -12,7 +12,7 @@ import static junit.framework.TestCase.*;
  */
 public class XmlConfigTests {
 
-   /* --- Uncomment one test at a time fixing just one thing at a time ---
+
 
 
    // Create "beans.xml" file in the resources directory based on the example shown here:
@@ -62,7 +62,7 @@ public class XmlConfigTests {
     AccountService accountService = context.getBean(AccountService.class);
     assertNotNull(accountService.getAccountDAO());
   }
-
+/* --- Uncomment one test at a time fixing just one thing at a time ---
   @Test
   public void transactionDAOBeanProperlyDefinedTest () {
     ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
