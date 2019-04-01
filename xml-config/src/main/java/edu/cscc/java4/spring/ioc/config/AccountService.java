@@ -6,7 +6,7 @@ package edu.cscc.java4.spring.ioc.config;
  */
 public class AccountService {
 
-  AccountDAO accountDAO;
+  private AccountDAO accountDAO;
 
 
   public AccountDAO getAccountDAO () {

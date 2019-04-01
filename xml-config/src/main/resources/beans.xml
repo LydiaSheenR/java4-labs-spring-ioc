@@ -5,9 +5,18 @@
 
     <bean id="accountDAO" class="edu.cscc.java4.spring.ioc.config.AccountDAO"/>
 
-    <bean id="accountService" class="edu.cscc.java4.spring.ioc.config.AccountService"/>
+    <bean id="accountService" class="edu.cscc.java4.spring.ioc.config.AccountService">
+        <property name = "accountDAO" ref = "accountDAO"/>
+    </bean>
          <alias name="accountService" alias="accountServiceAlternateName"/>
 
+    <bean id="transactionDAO" class="edu.cscc.java4.spring.ioc.config.TransactionDAO">
+        <property name = "someProperty" value = "someValue"/>
+    </bean>
+
+    <bean id="transactionService" class="edu.cscc.java4.spring.ioc.config.TransactionService">
+        <constructor-arg ref="transactionDAO"/>
+    </bean>
 
 </beans>
 

@@ -62,7 +62,7 @@ public class XmlConfigTests {
     AccountService accountService = context.getBean(AccountService.class);
     assertNotNull(accountService.getAccountDAO());
   }
-/* --- Uncomment one test at a time fixing just one thing at a time ---
+
   @Test
   public void transactionDAOBeanProperlyDefinedTest () {
     ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
@@ -82,7 +82,5 @@ public class XmlConfigTests {
     TransactionDAO transactionDAO = context.getBean(TransactionDAO.class);
     assertEquals("someValue",transactionDAO.getSomeProperty());
   }
-
-  */
 
 }
