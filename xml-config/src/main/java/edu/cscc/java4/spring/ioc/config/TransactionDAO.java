@@ -9,6 +9,7 @@ public class TransactionDAO {
   private String someProperty;
 
 
+
   public String getSomeProperty () {
 
     return someProperty;

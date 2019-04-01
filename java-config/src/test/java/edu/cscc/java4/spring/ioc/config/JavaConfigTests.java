@@ -3,7 +3,7 @@ package edu.cscc.java4.spring.ioc.config;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 import static junit.framework.TestCase.*;
 
@@ -18,7 +18,7 @@ public class JavaConfigTests {
     assertNull(Thread.currentThread().getContextClassLoader().getResource("beans.xml"));
   }
 
-  /* --- Uncomment one test at a time changing just enough to get the test passing ---
+
 
   @Test
   public void appConfigClassExistsInClasspathTest () throws Exception {
@@ -58,12 +58,14 @@ public class JavaConfigTests {
       context.getBean("accountServiceAlternateName").getClass().getName());
   }
 
+
   @Test
   public void accountDAOInjectedIntoServiceTest () {
     ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
     AccountService accountService = context.getBean(AccountService.class);
     assertNotNull(accountService.getAccountDAO());
   }
+
 
   @Test
   public void transactionDAOBeanProperlyDefinedTest () {
@@ -84,7 +86,5 @@ public class JavaConfigTests {
     TransactionDAO transactionDAO = context.getBean(TransactionDAO.class);
     assertEquals("someValue",transactionDAO.getSomeProperty());
   }
-
-  */
 
 }

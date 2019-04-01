@@ -12,7 +12,7 @@ import static junit.framework.TestCase.*;
  */
 public class XmlConfigTests {
 
-   /* --- Uncomment one test at a time fixing just one thing at a time ---
+
 
 
    // Create "beans.xml" file in the resources directory based on the example shown here:
@@ -82,7 +82,5 @@ public class XmlConfigTests {
     TransactionDAO transactionDAO = context.getBean(TransactionDAO.class);
     assertEquals("someValue",transactionDAO.getSomeProperty());
   }
-
-  */
 
 }

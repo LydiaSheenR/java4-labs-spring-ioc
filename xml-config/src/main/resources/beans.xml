@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="accountDAO" class="edu.cscc.java4.spring.ioc.config.AccountDAO"/>
+
+    <bean id="accountService" class="edu.cscc.java4.spring.ioc.config.AccountService">
+        <property name = "accountDAO" ref = "accountDAO"/>
+    </bean>
+         <alias name="accountService" alias="accountServiceAlternateName"/>
+
+    <bean id="transactionDAO" class="edu.cscc.java4.spring.ioc.config.TransactionDAO">
+        <property name = "someProperty" value = "someValue"/>
+    </bean>
+
+    <bean id="transactionService" class="edu.cscc.java4.spring.ioc.config.TransactionService">
+        <constructor-arg ref="transactionDAO"/>
+    </bean>
+
+</beans>
+
